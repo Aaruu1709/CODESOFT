@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Landing Page</title>
+    <style>
+        /* Global styles */
+        body, h1, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f25e1e;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #777;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #f25e1e;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        /* Feature section styles */
+        .feature {
+            display: inline-block;
+            width: 30%;
+            padding: 2rem;
+            margin: 1rem;
+            background-color: #ffebdf;
+            border-radius: 5px;
+        }
+
+        .feature img {
+            max-width: 100px;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact form styles */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #de7c13;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color:  #f25e1e;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color:  #f25e1e;
+            color: #000000;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        #about {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem;
+        }
+
+        .about-content {
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: 70%;
+            border-radius: 10px;
+        }
+
+        .about-button {
+            display: inline-block;
+            background-color: #e76c07;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .about-button:hover {
+            background-color: #474547;
+        }
+
+        /* Styles for the "Services" section */
+        #services {
+            background-color: #f5f5f5;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        #services h2 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service {
+            margin: 1rem;
+            padding: 1rem;
+            background-color: #f08e3d97;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(237, 83, 239, 0.2);
+        }
+
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .service h3 {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service p {
+            margin-top: 0.5rem;
+            color: #666;
+        }
+
+        /* Additional styles for the "Services" section */
+        .service {
+            position: relative; /* Required for positioning overlay */
+            overflow: hidden; /* Hide overlay initially */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(242, 123, 210, 0.5); /* Color overlay */
+            opacity: 0; /* Initially transparent */
+            transition: opacity 0.3s; /* Smooth opacity transition */
+        }
+
+        .service:hover .overlay {
+            opacity: 0.5; /* Show overlay on hover */
+        }
+
+        .service:hover img {
+            transform: scale(1.05); /* Scale image on hover */
+            transition: transform 0.3s; /* Smooth scale transition */
+        }
+    </style>
+</head>
+<body>
+    <!-- Your HTML content here -->
+
+    <header>
+        <!-- Header content here -->
+        
+           
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+    
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="search-bar">
+                        <form>
+                            <input type="text" placeholder="Search...">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        
+    </header>
+    <section id="hero">
+        <h1>Welcome to My Landing Page</h1>
+        <p>Your one-stop destination for amazing content!</p>
+        <p>""Empowering Success, One Innovation at a Time.
+            "Crafting Excellence, Building Futures.""</p>
+        <a href="#contact" class="cta-button">Get Started</a>
+        <br><br><br>
+        <hr>
+    </section>
+    <section id="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>
+        
+
+                "Discover Our Inspirational Leader:
+                
+                Sarah Johnson
+                Chairperson & Visionary
+                
+                Sarah Johnson, our esteemed Chairperson, is the driving force behind our relentless pursuit of excellence. With a remarkable journey of turning challenges into opportunities, she inspires our team to think beyond boundaries. Sarah's unwavering dedication to innovation fuels our mission to transform industries and shape a brighter future for all."
+                
+                This description introduces Sarah Johnson as the Chairperson and emphasizes her inspiring journey and dedication to innovation, which aligns with the company's mission to bring about positive change.
+            </p>
+            <a href="#" class="about-button">Learn More</a>
+        </div>
+        <div class="about-image">
+            <img src="img folder/img3.jpg" alt="About Image">
+        </div>
+    </section>
+    
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
+        <div class="service">
+            <img src="img folder/5.jpeg" alt="Service 1">
+            <div class="overlay"></div> 
+            <h3>Risk Management</h3>
+        </div>
+        <div class="service">
+            <img src="img folder/img4.jpeg" alt="Service 1">
+            <div class="overlay"></div> 
+            <h3>Time Management</h3>
+        </div>
+        <div class="service">
+            <img src="img folder/6.jpeg" alt="Service 1">
+            <div class="overlay"></div>
+            <h3>Strategic Planning</h3>
+        </div>
+        <div class="service">
+            <img src="img folder/7.jpeg" alt="Service 1">
+            <div class="overlay"></div> 
+            <h3>Training And Development</h3>
+        </div>
+    </div>
+</section>
+
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature">
+            <img src="img folder/planning.jpeg" alt="Feature 1">
+            <h3>planning And organization</h3>
+            <p>1:Planning: Business management involves setting goals, creating strategies, and developing plans to achieve organizational objectives. This includes short-term and long-term planning.
+
+                2:Organizing: This feature involves arranging and structuring resources, such as human, financial, and physical, to optimize efficiency and productivity. It also includes defining roles and responsibilities within the organization.</p>
+        </div>
+        <div class="feature">
+            <img src="img folder/decision.jpeg" alt="Feature 2">
+            <h3>Decision-Making</h3>
+            <p>Decision-Making: Business managers are responsible for making critical decisions that impact the organization. These decisions range from day-to-day choices to strategic, long-term plans.Decision making can be influenced by various factors, including personal values, past experiences, and emotional states.In a business context, data-driven decision making is becoming increasingly important, as it relies on quantitative analysis to guide choices and strategies.</p>
+        </div>
+        <div class="feature">
+            <img src="img folder/hrm.jpeg" alt="Feature 3">
+            <h3>Human Resource Management</h3>
+            <p>Human Resource Management: Managing employees is a fundamental aspect of business management. It includes recruiting, training, performance evaluation, and addressing employee concerns.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2023 My Landing Page</p>
+    </footer>
+
+</body>
+</html>
